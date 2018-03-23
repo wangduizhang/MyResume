@@ -1,0 +1,23 @@
+<view style='width:{{tabwidth}};height:{{tabheight}}'>  
+  <!--顶部导航栏-->  
+  <view class="swiper-tab">  
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+      <view style='width:180px;'>工作技能</view>
+      <view class="{{currentTab==0 ? 'border' : ''}}"></view>
+    </view>  
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+      <view style='width:180px;'>项目经验</view>
+      <view class="{{currentTab==1 ? 'border' : ''}}"></view>
+    </view>
+  </view>  
+  
+  <!--内容主体-->  
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">  
+    <swiper-item>  
+      <view>这是我的工作技能</view>  
+    </swiper-item>  
+    <swiper-item>  
+      <view>这是我的项目经验</view>  
+    </swiper-item> 
+  </swiper>  
+</view>  

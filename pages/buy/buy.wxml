@@ -1,0 +1,36 @@
+<view class='back' style='width:{{backwidth}};height:{{backheight}}'>
+<text style='font-size:10px'>↓微信扫一扫即可↓</text>
+<view class='back' style='width:{{backwidth}}' bindtap="doubleTap" bindtouchstart="touchStart" bindtouchend="touchEnd">
+  <image style='width:{{adwidth}};height:{{adheight}};' src='../../images/ad.png'></image>
+</view>
+  <text style='font-size:10px'>若您不需要，请将此简历分享给身边有需要的人，谢谢！</text>
+</view>
+
+<!--联系方式-->
+<view class='tel' style='margin-top: {{teltop}};height:{{ttheight}};'>
+  <!--电话-->
+  <view class='stel' style='width:{{telwidth}};height:{{telheight}};' bindtap='callMe'>
+    <image src='images/tel.png' class='telico' style='margin-top:{{center}}'></image>
+    <text selectable='true' style='margin-top:{{center}}'>18454343991</text>
+  </view>
+  <!--QQ-->
+  <view class='stel' style='width:{{telwidth}};height:{{telheight}};'>
+    <image src='images/qq.png' class='telico' style='margin-top:{{center}}'></image>
+    <text selectable='true' style='margin-top:{{center}}'>326013443</text>
+  </view>
+  <!--微信-->
+  <view class='stel' style='width:{{telwidth}};height:{{telheight}};'>
+    <image src='images/weixin.png' class='telico' style='margin-top:{{center}}'></image>
+    <text selectable='true' style='margin-top:{{center}}'>w326013443</text>
+  </view>
+  <!--电子邮件-->
+  <view class='stel' style='width:{{telwidth}};height:{{telheight}};'>
+    <image src='images/mail.png' class='telico' style='margin-top:{{center}}'></image>
+    <text selectable='true' style='margin-top:{{center}}'>326013443@qq.com</text>
+  </view>
+  <!--github-->
+  <view class='stel'  bindtap="toast" style='border:0px;width:{{telwidth}};height:{{telheight}};'>
+    <image src='images/github.png' class='telico' style='margin-top:{{center}};width:30px;height:30px;'></image>
+    <text selectable='true' style='margin-top:{{center}}'>github.com/wangduizhang</text>
+  </view>
+</view>

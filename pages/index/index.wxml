@@ -1,0 +1,127 @@
+<!--index.wxml-->
+<view class='root' bindtouchstart='touchStart' bindtouchend='touchEnd'>
+  <view>
+    <view>
+      <view class='cebian' style='width:{{cebianwidth}};height:{{cebianheight}};'>
+        <view class='photokuang' style='width:{{cebianwidth}}; pointer-events:;'>
+          <image class='photo' src='../../images/myphoto.png'></image>
+        </view>
+        <view class='line' style='height:{{lineheight}};'></view>
+        <view class='cyclebox' style='width:{{cebianwidth}};'>
+          <view class='cycle1box' style='margin-top:-{{cycle1box}}px;'>
+            <image class='cycle'></image>
+          </view>
+          <view class='cycle1box' style='margin-top:{{cycle2box}}px;'>
+            <image class='cycle'></image>
+          </view>
+          <view class='cycle1box' style='margin-top:{{cycle3box}}px;'>
+            <image class='cycle'></image>
+          </view>
+        </view>
+      </view>
+
+      <view class='infolan'>
+        <view style='width:{{infowidth}};height:{{nameheight}}'>
+          <text class='name'>姓名:{{name}}\n</text>
+          <text class='year'>工作年限:{{year}}</text>
+        </view>
+        <view style='width:{{infowidth}};height:{{tittleheight}}'>
+          <text class='title'>基本信息</text>
+        </view>
+        <view style='width:{{infowidth}};height:{{infoheight}}px;line-height:100%'>
+          <text class='info' decode='{{true}}'>性&nbsp;&nbsp;&nbsp;别：男
+          民&nbsp;&nbsp;&nbsp;族：汉
+          年&nbsp;&nbsp;&nbsp;龄：{{myAge}}
+          现居地：山东省淄博市桓台县
+          </text>
+        </view>
+        <view style='width:{{infowidth}};height:{{tittleheight}}'>
+          <text class='title'>学历信息</text>
+        </view>
+        <view style='width:{{infowidth}};height:{{infoheight/1.1}}px'>
+          <view style='width:25px;height:{{infoheight/4}}px;float:left'>
+            <image src='../../images/heat.png' style='width:20px;height:20px;margin-top:3px;'></image>
+          </view>
+          <view style='line-height:110%'>
+            <text class='info'>14-18年：菏泽学院(本科)\n化学工程与工艺专业</text>
+          </view>
+          <view style='width:25px;height:{{infoheight/4}}px;float:left'>
+            <image src='../../images/heat.png' style='width:20px;height:20px;margin-top:3px;'></image>
+          </view>
+          <view>
+            <text class='info'>软件设计师(软考)</text>
+          </view>
+        </view>
+        <view style='width:{{infowidth}};height:{{tittleheight}};float:left'>
+          <text class='title'>自我评价</text>
+        </view>
+      </view>
+    </view>
+    <view class='bot' style='width:{{infowidth}};height:{{infoheight}}px;'>
+      <text class='info'>热爱编程,熟悉JAVA,熟悉微信
+      小程序开发，了解MySQL关系
+      型数据库，熟悉Java Web</text>
+    </view>
+    <view class='bot' style='width:{{infowidth}};height:{{tittleheight}};'>
+      <text class='title'>工作技能&项目经验 ————</text>
+    </view>
+    <view class='bot' style='width:{{infowidth}};height:{{jiantouheight}}px' catchtap='nextPage'>
+      <image src='../../images/jiantou.png' style='width:{{jiantouwidth}}px;height:{{jiantouheight}}px'></image>
+    </view>
+  </view>
+
+  <!--扩展页面-->
+  <view style='background:#fff;float:left;width:{{tabwidth}}px;height:{{tabheight/1.1}}px;display:{{display}};margin-top:-{{tabheight -30}}px; box-shadow:0px 0px 8px #7A7A7A;border-radius:10px 10px;'>
+    <!--顶部导航栏-->
+    <view class="swiper-tab">
+      <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" catchtap="swichNav" style='width:{{tabwidth/3}}px;'>
+        <view style='width:{{tabwidth/3}}px;'>工作技能</view>
+        <view class="{{currentTab==0 ? 'border' : ''}}"></view>
+      </view>
+      <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" catchtap="swichNav" style='width:{{tabwidth/3}}px;'>
+        <view style='width:{{tabwidth/3}}px;'>项目经验</view>
+        <view class="{{currentTab==1 ? 'border' : ''}}"></view>
+      </view>
+      <view style='float:right;margin-left:{{tabwidth/5}}px;margin-top:10rpx'>
+        <image catchtap='hidePage' style='width:40rpx;height:40rpx' src='../../images/close.png'></image>
+      </view>
+    </view>
+
+    <!--内容主体-->
+    <swiper style='height:290px' class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+      <swiper-item>
+        <view style='line-height:160%'>        
+        <text decode='true'>
+        >>开发工具：
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;熟悉MyEclipse、NetBeans
+        >>编程语言：
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;熟悉Java、Java Web、HTML、了解
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JavaScript、jQuery、Bootstrap、
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;css、C、Python、
+        >>服务器、数据库：
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;了解Tomcat、MySQL
+        >>其他技术：
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;熟悉Taglib、Junit、debug
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;了解XML编程、Servlet、MVC开发模式、
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;基本的数据结构和算法
+        </text>
+        </view>
+
+      </swiper-item>
+      <swiper-item>
+        <view>
+          <text decode='true'>
+          >>J2SE项目:佛学播放器
+          
+          >>毕业设计:沉砂池参数计算软件
+
+          >>J2EE项目:登陆注册界面
+
+          ==================================
+          以上项目源码(包括简历源码)分享在GitHub
+          </text>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

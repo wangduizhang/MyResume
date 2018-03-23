@@ -1,0 +1,9 @@
+<!--pages/express/express.wxml-->
+<view class = "back" style='height:{{backheight}}px'>
+    <input placeholder="请输入快递单号" bindinput="input" />
+  <button type="primary" bindtap="btnClick" style='box-shadow:0px 0px 20px #2AB529;'> 查询 </button> 
+</view>
+<scroll-view scroll-y="true" style="margin:0 auto;margin-top:20px;height:{{textheight}}px;width:{{textwidth}}px;box-shadow:0px 0px 11px #333333;border-radius:10px;">
+  <view class='info'></view>
+  <text>即将上线</text>
+</scroll-view>

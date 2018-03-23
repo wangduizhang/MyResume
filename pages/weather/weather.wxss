@@ -1,0 +1,63 @@
+view{
+  text-align: center;
+  margin: 0;
+}
+text{
+  color:#000000;
+  font-size:90%;
+}
+.temp{
+  color:#a9a9a9;
+}
+.top{
+  float: left;
+  height: 400px;
+}
+.head{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.city{
+  float: left;
+}
+.loc{
+  float: left;
+}
+.now_day{
+  float: left;
+}
+.bottom{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:center;
+  float: left;
+  padding-top: 20px;
+}
+.day{
+  float: left;
+  margin-top: 30px;
+}
+.ico{
+  float: left;
+  margin-top: 30px;
+}
+.info{
+  float: left;
+  margin-top: 30px;
+}
+.fallinfo{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:left;
+  float: left;
+}
+.today_info{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:center;
+}

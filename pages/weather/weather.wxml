@@ -1,0 +1,68 @@
+<!--天气预报页面-->
+<!--当前天气情况，有背景-->
+<view class='top' style='background:#e0f0e9;width:{{top_width}};height:{{top_height}}'>
+  <view class='head' style='width:{{head_width}};'>
+    <!--当前城市，点击可手动更换城市-->
+    <view class='city' style='width:{{city_loc_width}};height:{{city_loc_height}}'><text>{{city}}</text></view>
+    <!--当前日期-->
+    <view class='now_day' style='width:{{n_d_width}};height:{{n_d_height}};'><text >{{Date}}</text></view>
+    <!--定位城市，点击自动定位城市-->
+    <view class='loc' style='width:{{city_loc_width}};height:{{city_loc_height}}'>
+    <image src='{{locico}}' bindtouchstart='setLoc' bindtouchend = 'setUp' style='width:40%;height:40%'></image></view>
+  </view>
+  <!--天气温度-->
+  <view class='head_ico' style='font-size:{{fontsize}};width:{{head_ico_width}};height:{{head_ico_height}}'>
+    <text class='temp'>{{temp}}</text>
+  </view>
+  <!--天气详细-->
+  <view class='today_info'>
+    <view class='fallinfo' style='width:{{f_i_width}};height:{{f_i_height}};'>
+      <view class='mico' style='width:{{i_width}};height:{{i_height}};'>
+        <image style='width:50%;height:50% ;margin-top:5px' src='images/tico.png'></image>
+      </view>
+      {{tt}}
+    </view>
+    <view class='fallinfo' style='width:{{f_i_width}};height:{{f_i_height}};'> 
+      <view class='mico' style='width:{{i_width}};height:{{i_height}};'>
+      <image style='width:60%;height:60% ;margin-top:3px' src='images/wico.png'></image>
+      </view>
+      {{ii}}
+    </view>
+    <view class='fallinfo' style='width:{{f_i_width}};height:{{f_i_height}};'>
+    <view class='mico' style='width:{{i_width}};height:{{i_height}};'>
+      <image style='width:45%;height:45% ;margin-top:5px' src='images/PM.png'></image>
+    </view>
+      {{pm}}
+    </view>
+    <view class='fallinfo' style='width:{{f_i_width}};height:{{f_i_height}};'>
+    <view class='mico' style='width:{{i_width}};height:{{i_height}};'>
+      <image style='width:60%;height:60% ;margin-top:7px' src='images/windico.png'></image>
+    </view> 
+      {{ww}}
+    </view>
+  </view>
+</view>
+ <!--未来三天天气预报-->
+<view class='bottom' style='background:#ffffff; width:{{bot_width}};height:{{bot_height}}'>
+<!--第一天-->
+    <view class='day'  style='width:{{w_t_width}};height:{{w_height}}'>
+    <text>{{date1}}</text></view>
+    <view class='ico' style='width:{{n_ico_width}};height:{{n_height}}'>
+    <text>{{info1}}</text></view>
+    <view class='info' style='width:{{n_t_width}};height:{{n_height}}'>
+    <text>{{temp1}}</text></view>
+<!--第二天-->
+    <view class='day' style='width:{{w_t_width}};height:{{w_height}}'>
+    <text>{{date2}}</text></view>
+    <view class='ico' style='width:{{n_ico_width}};height:{{n_height}}'>
+    <text>{{info2}}</text></view>
+    <view class='info' style='width:{{n_t_width}};height:{{n_height}}'>
+    <text>{{temp2}}</text></view>
+<!--第三天-->
+    <view class='day' style='width:{{w_t_width}};height:{{n_height}}'>
+    <text>{{date3}}</text></view>
+    <view class='ico' style='width:{{n_ico_width}};height:{{n_height}}'>
+    <text>{{info3}}</text></view>
+    <view class='info' style='width:{{n_t_width}};height:{{n_height}}'>
+    <text>{{temp3}}</text></view>
+</view>
